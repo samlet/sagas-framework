@@ -25,6 +25,10 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.Map;
 
 import org.apache.ofbiz.entity.Delegator;
+import org.apache.ofbiz.entity.GenericEntityException;
+import org.apache.ofbiz.entity.GenericValue;
+import org.apache.ofbiz.entity.model.ModelEntity;
+import org.apache.ofbiz.entity.model.ModelReader;
 import org.apache.ofbiz.entity.util.EntityUtilProperties;
 import org.apache.ofbiz.service.GenericRequester;
 import org.apache.ofbiz.service.GenericResultWaiter;
@@ -173,4 +177,24 @@ public class RemoteDispatcherImpl extends UnicastRemoteObject implements RemoteD
         }
     }
 
+    public Delegator getDelegator() throws RemoteException{
+        return dispatcher.getDelegator();
+    }
+
+    public GenericValue makeValue(String entityName) throws RemoteException{
+        return dispatcher.getDelegator().makeValue(entityName);
+    }
+
+    /** Creates a Entity in the form of a GenericValue without persisting it */
+    public GenericValue makeValue(String entityName, Map<String, ? extends Object> fields) throws RemoteException{
+        return dispatcher.getDelegator().makeValue(entityName, fields);
+    }
+
+    public ModelReader getModelReader() throws RemoteException{
+        return dispatcher.getDelegator().getModelReader();
+    }
+
+    public ModelEntity getModelEntity(String entityName) throws GenericEntityException, RemoteException {
+        return dispatcher.getDelegator().getModelReader().getModelEntity(entityName);
+    }
 }

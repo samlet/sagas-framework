@@ -22,6 +22,11 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.Map;
 
+import org.apache.ofbiz.entity.Delegator;
+import org.apache.ofbiz.entity.GenericEntityException;
+import org.apache.ofbiz.entity.GenericValue;
+import org.apache.ofbiz.entity.model.ModelEntity;
+import org.apache.ofbiz.entity.model.ModelReader;
 import org.apache.ofbiz.service.GenericRequester;
 import org.apache.ofbiz.service.GenericResultWaiter;
 import org.apache.ofbiz.service.GenericServiceException;
@@ -204,5 +209,11 @@ public interface RemoteDispatcher extends Remote {
      */
     void schedule(String serviceName, Map<String, ? extends Object> context, long startTime) throws GenericServiceException, RemoteException;
 
+    // Delegator getDelegator() throws RemoteException;
+    GenericValue makeValue(String entityName) throws RemoteException;
+    /** Creates a Entity in the form of a GenericValue without persisting it */
+    GenericValue makeValue(String entityName, Map<String, ? extends Object> fields) throws RemoteException;
+    // ModelReader getModelReader() throws RemoteException;
+    ModelEntity getModelEntity(String entityName) throws GenericEntityException, RemoteException;
 }
 

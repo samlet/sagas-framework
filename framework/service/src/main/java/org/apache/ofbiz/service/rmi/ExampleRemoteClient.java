@@ -75,6 +75,7 @@ public class ExampleRemoteClient {
     public static void main(String[] args) throws Exception {
         ExampleRemoteClient rm = new ExampleRemoteClient();
         Map<String, Object> result = rm.runTestService();
+        System.out.println(result);
         Debug.logInfo("Service Result Map: " + result, MODULE);
     }
 }

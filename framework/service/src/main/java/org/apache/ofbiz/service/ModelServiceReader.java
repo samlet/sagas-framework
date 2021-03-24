@@ -171,10 +171,15 @@ public final class ModelServiceReader implements Serializable {
         service.setDefaultEntityName(UtilXml.checkEmpty(serviceElement.getAttribute("default-entity-name")).intern());
         service.setFromLoader(isFromURL ? readerURL.toExternalForm() : handler.getLoaderName());
         service.setAction(UtilXml.checkEmpty(serviceElement.getAttribute("action")).intern());
+        // +
+        if (service.getAction().isEmpty()){
+            service.setAction("POST");
+        }
 
         // these default to true; if anything but true, make false
         service.setAuth("true".equalsIgnoreCase(serviceElement.getAttribute("auth")));
-        service.setExport("true".equalsIgnoreCase(serviceElement.getAttribute("export")));
+        // service.setExport("true".equalsIgnoreCase(serviceElement.getAttribute("export")));
+        service.setExport(true); // +
         service.setDebug("true".equalsIgnoreCase(serviceElement.getAttribute("debug")));
 
         // these defaults to false; if anything but false, make it true
