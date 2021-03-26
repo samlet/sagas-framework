@@ -20,6 +20,9 @@ rev:
 rev-plug:
     cd plugins && git diff -U8 ofbiz-rest-impl/src/main/java/org/apache/ofbiz/ws/rs/resources/OFBizServiceResource.java
 
+rev-v2:
+	git diff -U8 applications/datamodel/entitydef/party-entitymodel.xml
+
 auth:
     curl -k -X POST "https://localhost:8443/rest/auth/token" -H "accept: application/json" -H "Authorization: Basic YWRtaW46b2ZiaXo="
 

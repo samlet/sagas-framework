@@ -730,8 +730,8 @@ under the License.
         <field name="reasonEnumId" type="id"></field>
         <field name="contactListId" type="id"></field>
         <field name="headerString" type="very-long"></field>
-        <field name="fromString" type="very-long"></field>
-        <field name="toString" type="very-long"></field>
+        <field name="fromText" type="very-long"></field>
+        <field name="toText" type="very-long"></field>
         <field name="ccString" type="very-long"></field>
         <field name="bccString" type="very-long"></field>
         <field name="messageId" type="value"></field>
