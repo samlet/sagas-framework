@@ -11,6 +11,8 @@ rev:
     git diff -U8 framework/entity/config/entityengine.xml
     # for log
     git diff -U8 framework/base/config/debug.properties
+    # change <logger name="org.apache.ofbiz" level="all"/> to "warn"
+    git diff -U8 framework/base/config/log4j2.xml
     # for rmi: ofbiz.start.loaders=main,rmi
     git diff -U8 framework/start/src/main/resources/org/apache/ofbiz/base/start/start.properties
     git diff -U8 framework/service/config/service.properties
