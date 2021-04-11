@@ -69,6 +69,8 @@ under the License.
         <logger name="org.apache.ofbiz.catalina" level="warn"/>
         <logger name="org.apache.ofbiz.base.converter.Converters" level="warn"/>
         <logger name="freemarker" level="warn"/>
+        <logger name="io.netty" level="warn"/>
+        <logger name="io.grpc" level="warn"/>
 
         <Root level="all">
             <AppenderRef ref="async"/>

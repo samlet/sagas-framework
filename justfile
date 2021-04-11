@@ -18,6 +18,8 @@ rev:
     git diff -U8 framework/service/config/service.properties
     git diff -U8 framework/service/src/main/java/org/apache/ofbiz/service/rmi/RemoteDispatcher.java
     git diff -U8 framework/service/src/main/java/org/apache/ofbiz/service/rmi/RemoteDispatcherImpl.java
+    # disable webapps
+    git diff -U8 framework/catalina/ofbiz-component.xml
 
 rev-plug:
     cd plugins && git diff -U8 ofbiz-rest-impl/src/main/java/org/apache/ofbiz/ws/rs/resources/OFBizServiceResource.java
