@@ -4,6 +4,12 @@ load:
     ./gradlew loadAll
 start:
     ./gradlew ofbiz
+web:
+    cp framework/catalina/ofbiz-component-main.xml framework/catalina/ofbiz-component.xml
+    ./gradlew ofbiz
+srv:
+    cp framework/catalina/ofbiz-component-none.xml framework/catalina/ofbiz-component.xml
+    ./gradlew ofbiz
 rev:
     # for rest
     git diff -U8 framework/service/src/main/java/org/apache/ofbiz/service/ModelServiceReader.java
