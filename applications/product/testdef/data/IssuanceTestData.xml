@@ -20,7 +20,7 @@ under the License.
 
 <entity-engine-xml>
 
-    <!-- An order that needs stock from two inventory items -->
+    <!-- An order that needs stock from two inventory items (需要两个存货项的库存的订单) -->
     <OrderHeader createdBy="admin" currencyUom="USD" entryDate="2011-08-12 23:17:11.507" grandTotal="105.14" orderId="DEMO81015" orderTypeId="SALES_ORDER" priority="2" productStoreId="9000" remainingSubTotal="79.56" salesChannelEnumId="WEB_SALES_CHANNEL" statusId="ORDER_APPROVED" visitId="10043"/>
     
     <OrderItem changeByUserLoginId="admin" isModifiedPrice="N" isPromo="N" itemDescription="Round Gizmo" orderId="DEMO81015" orderItemSeqId="00001" orderItemTypeId="PRODUCT_ORDER_ITEM" prodCatalogId="DemoCatalog" productId="GZ-2644" quantity="6.000000" selectedAmount="0.000000" statusId="ITEM_APPROVED" unitListPrice="48.000" unitPrice="38.400"/>
