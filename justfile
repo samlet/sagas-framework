@@ -48,5 +48,8 @@ copy-jar:
 jar:
 	./gradlew jar
 	# cp build/libs/ofbiz.jar ~/sagas/projs/bluecc-adapter/lib/
-	cp build/libs/ofbiz.jar ~/sagas/projs/dispat-api/lib/
+	# cp build/libs/ofbiz.jar ~/sagas/projs/dispat-api/lib/
+
+create plug:
+	./gradlew createPlugin -PpluginId={{plug}}
 
