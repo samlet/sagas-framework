@@ -231,6 +231,12 @@ dependencies {
 
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
 //    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.19'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
 
 
     testImplementation 'org.hamcrest:hamcrest-library:2.2' // Enable junit4 to not depend on hamcrest-1.3
