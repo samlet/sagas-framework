@@ -229,6 +229,10 @@ dependencies {
     implementation 'com.auth0:java-jwt:3.11.0'
     implementation 'org.jdom:jdom:1.1.3' // don't upgrade above 1.1.3, makes a lot of not obvious and useless complications, see last commits of OFBIZ-12092 for more
 
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+//    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.19'
+
+
     testImplementation 'org.hamcrest:hamcrest-library:2.2' // Enable junit4 to not depend on hamcrest-1.3
     testImplementation 'org.mockito:mockito-core:3.6.28'
     testImplementation 'org.jmockit:jmockit:1.49'
