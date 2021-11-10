@@ -39,3 +39,4 @@ desktop.ini
 *.patch
 /docs/asciidoc/images/
 .idea/
+/.github-old/

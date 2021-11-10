@@ -53,3 +53,6 @@ jar:
 create plug:
 	./gradlew createPlugin -PpluginId={{plug}}
 
+commit:
+	git push -u origin bluecc
+
