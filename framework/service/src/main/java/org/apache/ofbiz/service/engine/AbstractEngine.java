@@ -79,7 +79,7 @@ public abstract class AbstractEngine implements GenericEngine {
      * @param model  the object representing a service
      * @return the actual location where to find the service implementation
      */
-    protected String getLocation(ModelService model) {
+    public String getLocation(ModelService model) {
         return LOCATION_MAP.getOrDefault(model.getLocation(), model.getLocation());
     }
 
