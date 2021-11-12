@@ -52,7 +52,7 @@ public final class ServiceEcaUtil {
 
     // using a cache is dangerous here because if someone clears it the ECAs won't run: public static UtilCache ecaCache =
     // new UtilCache("service.ServiceECAs", 0, 0, false);
-    private static Map<String, Map<String, List<ServiceEcaRule>>> ecaCache = new ConcurrentHashMap<>();
+    public static Map<String, Map<String, List<ServiceEcaRule>>> ecaCache = new ConcurrentHashMap<>();
 
     private ServiceEcaUtil() { }
 
@@ -148,7 +148,8 @@ public final class ServiceEcaUtil {
             //remove the old rule if found and keep the recent one
             //This will prevent duplicate rule execution along with enabled/disabled seca workflow
             if (rules.remove(rule)) {
-                Debug.logWarning("Duplicate Service ECA [" + serviceName + "] on [" + eventName + "] ", MODULE);
+                // Debug.logWarning("Duplicate Service ECA [" + serviceName + "] on [" + eventName + "] ", MODULE);
+                Debug.logInfo("Duplicate Service ECA [" + serviceName + "] on [" + eventName + "] ", MODULE);
             }
             rules.add(rule);
         }

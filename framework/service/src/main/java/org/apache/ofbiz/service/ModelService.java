@@ -1862,7 +1862,7 @@ public class ModelService extends AbstractMap<String, Object> implements Seriali
             if (deprecatedReason != null) {
                 informMsg.append(" because '").append(deprecatedReason).append("'");
             }
-            Debug.logWarning(informMsg.toString(), MODULE);
+            Debug.logInfo(informMsg.toString(), MODULE);
         }
     }
 
