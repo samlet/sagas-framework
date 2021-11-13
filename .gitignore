@@ -40,3 +40,4 @@ desktop.ini
 /docs/asciidoc/images/
 .idea/
 /.github-old/
+/runtime/logs-default/

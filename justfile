@@ -50,6 +50,10 @@ jar:
 	# cp build/libs/ofbiz.jar ~/sagas/projs/bluecc-adapter/lib/
 	# cp build/libs/ofbiz.jar ~/sagas/projs/dispat-api/lib/
 
+build-run:
+	./gradlew jar
+	java -jar build/libs/ofbiz.jar
+
 create plug:
 	./gradlew createPlugin -PpluginId={{plug}}
 
