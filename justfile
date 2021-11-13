@@ -60,3 +60,6 @@ create plug:
 commit:
 	git push -u origin bluecc
 
+sub:
+	python -m launcher.launcher start
+
