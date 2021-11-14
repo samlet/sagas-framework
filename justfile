@@ -63,3 +63,6 @@ commit:
 sub:
 	python -m launcher.launcher start
 
+tree:
+	./gradlew dependencies --configuration compileClasspath
+
