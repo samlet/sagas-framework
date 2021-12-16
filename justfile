@@ -66,3 +66,7 @@ sub:
 tree:
 	./gradlew dependencies --configuration compileClasspath
 
+test-order:
+	./gradlew "ofbiz --test component=order --test suitename=ordertests"
+
+
